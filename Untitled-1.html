@@ -9,10 +9,10 @@
     <input type="text" id="city" placeholder="Enter the city"> <button onclick="getWeather()">Search</button>
     <p id="result"></p>
     <script>
-        function weather(){
+        function getWeather(){
             let city = document.getElementById("city").value; fetch("https://wttr.in/" + city + "?format=j1") .then(res => res.json()) .then(data => { let temp = data.current_condition[0].temp_C; document.getElementById("answer").innerHTML = "Temperature: " + temp + " °C"; });
         }
-    <script src="script.js"></script>
+    
 
 </body>
 </html>
